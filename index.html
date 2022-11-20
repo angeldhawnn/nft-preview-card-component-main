@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Outfit', sans-serif;
+    }
+    /*Style for main container*/
+    .main-container{
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: hsl(217, 54%, 11%);
+    
+    }
+    /*Style for card container*/
+    .main-container .card{
+      background-color: hsl(216, 50%, 16%);
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      padding: 1em;
+      border-radius: 10px;
+    }
+    .img-container{
+      position: relative;
+    }
+    /*Style for img container inside card*/
+    .img-container img{
+    display:block;
+    width: 100%;
+    border-radius: 10px;
+    }
+    .img-container .view{
+      position: absolute;
+      background:hsl(178, 100%, 50%, .5) ;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      border-radius: 10px;
+    }
+    .img-container .view:hover{
+      opacity: 1;
+    }
+    .card h2:hover{
+      color:hsl(178, 100%, 50%) ;
+    }
+    .img-container .view img{
+      position: absolute;
+      width: 30px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    
+    }
+    /* Style for h1 */
+    h2{
+      padding: 1em 0;
+      color: white;
+    }
+    /*Style for paragraph*/
+    p{
+      font-size: 18px;
+      color: hsl(215, 51%, 70%);
+    }
+    /*style for eth container*/
+    .eth-container{
+      display:flex;
+      padding: 1em 0;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid hsl(215, 32%, 27%);
+    }
+    /*Style for eth*/
+    .eth-container .eth, .eth-container .days{
+      font-size: 1em;
+      font-weight: bold;
+    }
+    .eth-container .eth{
+      color: hsl(178, 100%, 50%);
+      display: flex;
+      align-items: center;
+      gap: 0px 10px;
+    }
+    .days{
+      color:hsl(215, 51%, 70%);
+      display: flex;
+      align-items: center;
+      gap: 0 10px;
+    }
+    .card .creation-container{
+      padding: 1em 0;
+    }
+    .card .creation-container .profile-container{
+      display: inline-block;
+      background: white;
+      padding: 2px;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+    }
+    .profile-container img{
+      width: 100%;
+    }
+    .creation-container{
+      display: flex;
+      align-items: center;
+    }
+    .creation-wrapper{
+      font-size: 18px;
+      font-weight: bold; 
+      padding: 0 10px;
+      color: white;
+    }
+    .creation-wrapper:hover{
+      color: hsl(178, 100%, 50%);
+    }
+    .creation-wrapper span{
+      color:hsl(215, 51%, 70%) ;
+    }
+    @media only screen and (min-width:400px){
+      .main-container .card{
+        
+        width: 400px;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="main-container">
+  <div class="card">
+    <div class="img-container">
+      <img src="./images/image-equilibrium.jpg">
+      <div class="view"><img src="./images/icon-view.png"alt="view icon"></div>
+    </div>
+    <h2>Equilibrium #3429</h2>
+
+ <p>Our Equilibrium collection promotes balance and calm.</p>
+<div class="eth-container">
+ <div class="eth"><img src="./images/icon-ethereum.png" alt="ethereum">0.041 ETH</div>
+  <div class="days"><img src="./images/icon-clock.png" alt="clock">3 days left</div>
+  </div>
+  <div class="creation-container">
+    <div class="profile-container">
+      <img src="./images/image-avatar.png" alt="avatar">
+    </div>
+   <div class="creation-wrapper"><span>Creation of</span> Jules Wyvern</div>
+  </div>
+  </div>
+<!--
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+    -->
+  </div>
+</body>
+</html>
